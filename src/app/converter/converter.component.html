@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span>Converter</span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Logout" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="convertercontainer">
+
+  <div fxFill fxLayout="row" fxLayoutAlign="center center">
+    <mat-card fxFlex="67" style="padding: 30px;background-color: #ffffff50;">
+      <mat-card-content fxLayout="row" fxLayoutAlign="space-around center">
+        <textarea fxFlex="50" [(ngModel)]="inputjson" name="inputjson" mdInput placeholder="Input JSON" rows="10"
+          [ngModelOptions]="{standalone: true}"></textarea>
+        <textarea style="margin-left: 20px;" fxFlex="50" [(ngModel)]="outputjson" disabled name="outputjson" mdInput
+          placeholder="Output JSON" rows="10" [ngModelOptions]="{standalone: true}"></textarea>
+      </mat-card-content>
+      <mat-card-footer fxLayout="column" fxLayoutAlign="center center">
+
+        <button mat-raised-button color="accent" (click)="convert($event)">Convert</button>
+
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

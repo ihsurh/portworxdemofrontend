@@ -1,0 +1,16 @@
+.convertercontainer {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/converter.webp");
+}
+
+.center {
+  margin: auto;
+  width: 10%;
+
+
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
